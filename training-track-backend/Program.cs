@@ -10,6 +10,17 @@ namespace training_track_backend
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularApp",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:4200")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
             // Add services to the container.
             // User
             builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -37,6 +48,8 @@ namespace training_track_backend
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AllowAngularApp");
 
             app.UseAuthorization();
 
