@@ -26,5 +26,15 @@ namespace training_track_backend.Services
         {
             return await _userRepository.GetUserById(id);
         }
+
+        public async Task<User?> GetUserByEmail(string  email)
+        {
+            return await _userRepository.GetUserByEmail(email);
+        }
+
+        public async Task<int> GetMaxId()
+        {
+            return await _userRepository.GetMaxId();
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using training_track_backend.DTOs;
-using training_track_backend.Models;
 using training_track_backend.Services;
 
 namespace training_track_backend.Controllers
@@ -17,12 +17,14 @@ namespace training_track_backend.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<TrainingDTO?>> CreateTraining([FromBody]TrainingDTO training)
         {
             return Ok(await _trainingService.CreateTraining(training));
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<TrainingDTO>?>> GetTrainingsByUserId(int userId)
         {
             return Ok(await _trainingService.GetTrainingsByUserId(userId));
