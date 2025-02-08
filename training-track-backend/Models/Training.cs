@@ -6,7 +6,7 @@ namespace training_track_backend.Models
     {
         CARDIO,
         STRENGTH_TRAINING,
-        FLEXIBILLITY
+        FLEXIBILITY
     }
 
     public class Training

@@ -20,6 +20,9 @@ namespace training_track_backend.Controllers
         [Authorize]
         public async Task<ActionResult<TrainingDTO?>> CreateTraining([FromBody]TrainingDTO training)
         {
+            var userId = User.Claims.ElementAt(0).Value;
+            training.UserId = Convert.ToInt32(userId);
+
             return Ok(await _trainingService.CreateTraining(training));
         }
 

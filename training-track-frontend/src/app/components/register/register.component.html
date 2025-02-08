@@ -1,0 +1,25 @@
+<mat-card class="register-card">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" [(ngModel)]="register.Email" />
+        <mat-error *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].value">
+          Invalid email address
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" [(ngModel)]="register.Password" />
+        <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+            <mat-icon>{{ hidePassword ? 'visibility' : 'visibility_off' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].value">
+          Password must contains at least 8 characters
+        </mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  </mat-card>
+  

@@ -1,0 +1,46 @@
+<mat-card class="workout-card">
+    <form [formGroup]="trainingForm" (ngSubmit)="onSubmit()">
+      
+      <p><strong>Exercise type</strong></p>
+      <mat-radio-group formControlName="exerciseType" class="exercise-options">
+        <mat-radio-button *ngFor="let type of exerciseTypes" [value]="type">
+          {{ type }}
+        </mat-radio-button>
+      </mat-radio-group>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Duration (minutes)</mat-label>
+        <input matInput formControlName="duration" type="number" min="1" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Burned calories</mat-label>
+        <input matInput formControlName="burnedCalories" type="number" min="1" />
+      </mat-form-field>
+  
+      <p><strong>Difficulty</strong></p>
+      <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
+        <input [(value)]="training.Difficulty" matSliderThumb #slider>
+      </mat-slider>
+  
+      <p><strong>Fatique</strong></p>
+      <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
+        <input [(value)]="training.Fatique" matSliderThumb #slider>
+      </mat-slider>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Your note (optional)</mat-label>
+        <textarea matInput formControlName="note"></textarea>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Date and time of workout</mat-label>
+        <input matInput formControlName="dateTime" [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="trainingForm.invalid">Add your workout</button>
+    </form>
+  </mat-card>
+  
