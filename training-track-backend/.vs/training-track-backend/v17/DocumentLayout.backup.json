@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\services\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:services\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\repository\\itrainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:repository\\itrainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\services\\itrainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:services\\itrainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\repository\\trainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:repository\\trainingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\dtos\\trainingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:dtos\\trainingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\dtos\\weekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:dtos\\weekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\models\\training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:models\\training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|c:\\users\\milica\\desktop\\training-track\\training-track-backend\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC0EBF39-C402-4349-9764-4444B8450FA5}|training-track-backend.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,37 +42,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ITrainingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Repository\\ITrainingRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ITrainingRepository.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Repository\\ITrainingRepository.cs",
+              "RelativeToolTip": "Repository\\ITrainingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:30:43.196Z",
+              "WhenOpened": "2025-02-09T17:54:23.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrainingDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\TrainingDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\TrainingDTO.cs",
-              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\TrainingDTO.cs",
-              "RelativeToolTip": "DTOs\\TrainingDTO.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA5wA8AAAAmAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ITrainingService.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\ITrainingService.cs",
+              "RelativeDocumentMoniker": "Services\\ITrainingService.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\ITrainingService.cs",
+              "RelativeToolTip": "Services\\ITrainingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T18:10:47.159Z",
+              "WhenOpened": "2025-02-09T17:35:45.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "TrainingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\TrainingDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\TrainingDTO.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\TrainingDTO.cs",
+              "RelativeToolTip": "DTOs\\TrainingDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T17:22:05.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TrainingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Repository\\TrainingRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TrainingRepository.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Repository\\TrainingRepository.cs",
+              "RelativeToolTip": "Repository\\TrainingRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T17:15:46.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrainingService.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\TrainingService.cs",
+              "RelativeDocumentMoniker": "Services\\TrainingService.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\TrainingService.cs",
+              "RelativeToolTip": "Services\\TrainingService.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAewFYAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T17:15:29.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeekDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\WeekDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\WeekDTO.cs",
+              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\WeekDTO.cs",
+              "RelativeToolTip": "DTOs\\WeekDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T17:09:39.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Training.cs",
               "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Models\\Training.cs",
               "RelativeDocumentMoniker": "Models\\Training.cs",
@@ -76,59 +132,19 @@
               "RelativeToolTip": "Models\\Training.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T18:11:37.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T18:11:37.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T18:56:02.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\DTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T17:40:24.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TrainingController.cs",
               "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Controllers\\TrainingController.cs",
               "RelativeDocumentMoniker": "Controllers\\TrainingController.cs",
               "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Controllers\\TrainingController.cs",
               "RelativeToolTip": "Controllers\\TrainingController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAwCoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T16:35:21.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\Milica\\Desktop\\training-track\\training-track-backend\\Services\\JwtService.cs",
-              "RelativeToolTip": "Services\\JwtService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T16:43:35.97Z",
               "EditorCaption": ""
             }
           ]

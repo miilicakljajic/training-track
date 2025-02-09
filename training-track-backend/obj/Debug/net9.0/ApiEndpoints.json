@@ -70,6 +70,32 @@
     ]
   },
   {
+    "ContainingType": "training_track_backend.Controllers.TrainingController",
+    "Method": "GetTrainingsPerWeek",
+    "RelativePath": "month/{month}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.DTOs.WeekDTO, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "training_track_backend.Controllers.WeatherForecastController",
     "Method": "Test",
     "RelativePath": "test",
@@ -122,13 +148,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.DTOs.TrainingDTO, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
