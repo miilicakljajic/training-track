@@ -36,7 +36,7 @@ namespace training_track_backend.Controllers
             return Ok(await _trainingService.GetTrainingsByUserId(userId));
         }
 
-        [HttpGet("/month/{month}")]
+        [HttpGet("month/{month}")]
         [Authorize]
         public async Task<ActionResult<IEnumerable<WeekDTO>?>> GetTrainingsPerWeek([FromRoute]int month)
         {

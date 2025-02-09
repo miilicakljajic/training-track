@@ -33,8 +33,8 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private authService: AuthService) {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 

@@ -1,0 +1,34 @@
+<div class="chip-container">
+      <mat-chip 
+        *ngFor="let month of months"
+        (click)="selectMonth(month)"
+        class="month-chip"
+        [class.mat-chip-selected]="selectedMonth === month">
+        {{ month }}
+      </mat-chip>
+</div>  
+
+<div class="weeks-container">
+    <mat-card *ngFor="let week of weeks; let i = index" class="week-card">
+      <mat-card-title>Week {{ i + 1 }}</mat-card-title>
+      <mat-card-subtitle>{{ week.startOfWeek | date: 'dd.MM.yyyy' }} - {{ week.endOfWeek | date: 'dd.MM.yyyy' }}</mat-card-subtitle>
+      
+      <mat-divider></mat-divider>
+  
+      <p><strong>Num of workouts:</strong> {{ week.trainings.length }}</p>
+  
+      <div *ngIf="week.trainings.length > 0; else noTrainings">
+        <ul>
+          <li *ngFor="let training of week.trainings">
+            <p>test test test</p>
+          </li>
+        </ul>
+      </div>
+  
+      <ng-template #noTrainings>
+        <p class="no-training">There were not a workouts this week.</p>
+      </ng-template>
+    </mat-card>
+</div>
+  
+  

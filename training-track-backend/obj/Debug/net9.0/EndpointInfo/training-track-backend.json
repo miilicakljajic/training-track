@@ -185,7 +185,7 @@
         }
       }
     },
-    "/month/{month}": {
+    "/Training/month/{month}": {
       "get": {
         "tags": [
           "Training"
