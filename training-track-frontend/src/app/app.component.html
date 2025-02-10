@@ -1,0 +1,12 @@
+<div class="mainContainer" [ngClass]="{ 'auth-background': isAuthPage() }">
+<mat-toolbar color="primary" class="toolbar">
+    <span class="spacer"></span>
+    
+    <button *ngIf="authService.isAuthenticated()" routerLink="home-page">Home</button>
+    <button *ngIf="authService.isAuthenticated()" (click)="logout()">Logout</button>
+    <button *ngIf="!authService.isAuthenticated()" routerLink="register">Register</button>
+    <button *ngIf="!authService.isAuthenticated()" routerLink="login">Login</button>
+</mat-toolbar>
+      
+<router-outlet />
+</div>

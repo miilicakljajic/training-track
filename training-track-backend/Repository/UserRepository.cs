@@ -29,5 +29,15 @@ namespace training_track_backend.Repository
         {
             return await _appDbContext.Users.Include(u => u.Trainings).FirstAsync(u => u.Id == id);
         }
+
+        public async Task<User?> GetUserByEmail(string email)
+        {
+            return await _appDbContext.Users.FirstAsync(u => u.Email == email);
+        }
+
+        public async Task<int> GetMaxId()
+        {
+            return await _appDbContext.Users.AnyAsync() ? await _appDbContext.Users.MaxAsync(i => i.Id) : 0;
+        }
     }
 }

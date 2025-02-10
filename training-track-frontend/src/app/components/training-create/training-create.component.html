@@ -1,0 +1,61 @@
+<div class="mainContainer">
+  <mat-card class="workout-card">
+    <h2 class="form-title">Add Your Workout</h2>
+
+    <form [formGroup]="trainingForm" (ngSubmit)="onSubmit()">
+
+      <div class="chip-container">
+        <mat-chip 
+          *ngFor="let type of types"
+          class="type-chip"
+          (click)="selectType(type)"
+          [class.mat-chip-selected]="selectedTypeString === type">
+          {{ type }}
+        </mat-chip>
+      </div>  
+
+      <mat-form-field appearance="outline">
+        <mat-label>Workout duration</mat-label>
+        <input matInput type="text" mask="00:00" placeholder="hh:mm"  formControlName="duration">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Burned calories</mat-label>
+        <input matInput formControlName="burnedCalories" type="number" min="1" />
+      </mat-form-field>
+
+      <p class="label">Difficulty</p>
+      <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
+        <input [(value)]="training.difficulty" matSliderThumb #slider>
+      </mat-slider>
+
+      <p class="label">Fatique</p>
+      <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
+        <input [(value)]="training.fatique" matSliderThumb #slider>
+      </mat-slider>
+
+      <div class="sliders">
+        <mat-form-field appearance="outline">
+          <mat-label>Your note (optional)</mat-label>
+          <textarea matInput formControlName="note"></textarea>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Date of workout</mat-label>
+        <input matInput formControlName="dateTime" [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Time of workout</mat-label>
+        <input matInput type="text" mask="00:00" placeholder="hh:mm"  formControlName="trainingTime">
+      </mat-form-field>
+
+      <button class="buttonCreate" color="primary" type="submit">
+        Add Your Workout
+      </button>
+    </form>
+  </mat-card>
+</div>

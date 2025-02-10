@@ -1,0 +1,30 @@
+<div class="mainContainer">
+  <h3 class="title">Here you can view statistics of your workouts. To see workouts overview per week, you have to select one month.</h3>
+  <div class="chip-container">
+        <mat-chip 
+          *ngFor="let month of months"
+          (click)="selectMonth(month)"
+          class="month-chip"
+          [class.mat-chip-selected]="selectedMonth === month">
+          {{ month }}
+        </mat-chip>
+  </div>  
+
+  <div class="weeks-container">
+      <mat-card *ngFor="let week of weeks; let i = index" class="week-card">
+        <mat-card-title>Week {{ i + 1 }}</mat-card-title>
+        <mat-card-subtitle>{{ week.startOfWeek | date: 'dd.MM.yyyy' }} - {{ week.endOfWeek | date: 'dd.MM.yyyy' }}</mat-card-subtitle>
+        
+        <mat-divider></mat-divider>
+    
+        <p><strong>Num of workouts:</strong> {{ week.numOfTrainings }}</p>
+        <p><strong>Total duration:</strong> {{ week.totalDuration.split(":")[0] + "h " +  week.totalDuration.split(":")[1]+ "m "}}</p>
+        <p><strong>Average difficulty:</strong> {{ week.averageDifficulty }}</p>
+        <p><strong>Average Fatique:</strong> {{ week.averageFatique }}</p>
+    
+        <div *ngIf="week.numOfTrainings == 0">
+          <p class="no-training">There were not a workouts this week.</p>
+        </div>
+      </mat-card>
+  </div>
+</div>

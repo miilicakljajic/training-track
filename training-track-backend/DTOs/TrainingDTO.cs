@@ -13,7 +13,6 @@ namespace training_track_backend.DTOs
         public uint Fatique { get; set; }
         public string Note { get; set; }
         public DateTime DateTime { get; set; }
-
         public int UserId { get; set;}
 
         public TrainingDTO()

@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "training_track_backend.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_1",
+    "Method": "\u003CMain\u003Eb__0_5",
     "RelativePath": "",
     "HttpMethod": "GET",
     "IsController": false,
@@ -18,16 +18,48 @@
     ]
   },
   {
-    "ContainingType": "training_track_backend.Controllers.WeatherForecastController",
-    "Method": "Test",
-    "RelativePath": "test",
-    "HttpMethod": "GET",
+    "ContainingType": "training_track_backend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Auth/login",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "training_track_backend.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "training_track_backend.DTOs.JwtDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "training_track_backend.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "training_track_backend.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "training_track_backend.DTOs.JwtDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -70,16 +102,36 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.DTOs.TrainingDTO, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "training_track_backend.Controllers.TrainingController",
+    "Method": "GetTrainingsPerWeek",
+    "RelativePath": "Training/month/{month}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
+        "Name": "month",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.DTOs.TrainingDTO, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.DTOs.WeekDTO, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -160,26 +212,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "training_track_backend.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[training_track_backend.WeatherForecast, training-track-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

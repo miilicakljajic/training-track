@@ -1,4 +1,5 @@
-﻿using training_track_backend.Models;
+﻿using training_track_backend.DTOs;
+using training_track_backend.Models;
 
 namespace training_track_backend.Repository
 {
@@ -6,5 +7,6 @@ namespace training_track_backend.Repository
     {
         Task<Training?> CreateTraining(Training training);
         Task<IEnumerable<Training>?> GetTrainingsByUserId(int  userId);
+        IEnumerable<Training>? GetTrainingsByUserIdAndMonth(int userId, int month);
     }
 }

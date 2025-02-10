@@ -24,5 +24,10 @@ namespace training_track_backend.Repository
         {
             return await _appDbContext.Trainings.Where(t => t.User.Id == userId).ToListAsync();
         }
+        
+        public IEnumerable<Training>? GetTrainingsByUserIdAndMonth(int userId, int month)
+        {
+            return _appDbContext.Trainings.Where(t => t.User.Id == userId && t.DateTime.Month == month).ToList();
+        }
     }
 }
