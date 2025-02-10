@@ -5,13 +5,13 @@ export enum ExerciseType {
 }
   
 export interface Training {
-    Id: number,
-    Type: ExerciseType
-    Duration: string,
-    BurnedCalories: number,
-    Difficulty: number,
-    Fatique: number,
-    Note: string,
-    DateTime: Date,
-    UserId: number
+    id: number,
+    type: ExerciseType
+    duration: string,
+    burnedCalories: number,
+    difficulty: number,
+    fatique: number,
+    note: string,
+    dateTime: Date,
+    userId: number
 }

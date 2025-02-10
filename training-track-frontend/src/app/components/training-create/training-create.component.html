@@ -1,46 +1,61 @@
-<mat-card class="workout-card">
+<div class="mainContainer">
+  <mat-card class="workout-card">
+    <h2 class="form-title">Add Your Workout</h2>
+
     <form [formGroup]="trainingForm" (ngSubmit)="onSubmit()">
-      
-      <p><strong>Exercise type</strong></p>
-      <mat-radio-group formControlName="exerciseType" class="exercise-options">
-        <mat-radio-button *ngFor="let type of exerciseTypes" [value]="type">
+
+      <div class="chip-container">
+        <mat-chip 
+          *ngFor="let type of types"
+          class="type-chip"
+          (click)="selectType(type)"
+          [class.mat-chip-selected]="selectedTypeString === type">
           {{ type }}
-        </mat-radio-button>
-      </mat-radio-group>
-  
+        </mat-chip>
+      </div>  
+
       <mat-form-field appearance="outline">
-        <mat-label>Duration (minutes)</mat-label>
-        <input matInput formControlName="duration" type="number" min="1" />
+        <mat-label>Workout duration</mat-label>
+        <input matInput type="text" mask="00:00" placeholder="hh:mm"  formControlName="duration">
       </mat-form-field>
-  
+
       <mat-form-field appearance="outline">
         <mat-label>Burned calories</mat-label>
         <input matInput formControlName="burnedCalories" type="number" min="1" />
       </mat-form-field>
-  
-      <p><strong>Difficulty</strong></p>
+
+      <p class="label">Difficulty</p>
       <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
-        <input [(value)]="training.Difficulty" matSliderThumb #slider>
+        <input [(value)]="training.difficulty" matSliderThumb #slider>
       </mat-slider>
-  
-      <p><strong>Fatique</strong></p>
+
+      <p class="label">Fatique</p>
       <mat-slider min="1" max="10" step="1" showTickMarks="true" discrete="true">
-        <input [(value)]="training.Fatique" matSliderThumb #slider>
+        <input [(value)]="training.fatique" matSliderThumb #slider>
       </mat-slider>
-  
+
+      <div class="sliders">
+        <mat-form-field appearance="outline">
+          <mat-label>Your note (optional)</mat-label>
+          <textarea matInput formControlName="note"></textarea>
+        </mat-form-field>
+      </div>
+
       <mat-form-field appearance="outline">
-        <mat-label>Your note (optional)</mat-label>
-        <textarea matInput formControlName="note"></textarea>
-      </mat-form-field>
-  
-      <mat-form-field appearance="outline">
-        <mat-label>Date and time of workout</mat-label>
+        <mat-label>Date of workout</mat-label>
         <input matInput formControlName="dateTime" [matDatepicker]="picker" />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-  
-      <button mat-raised-button color="primary" type="submit" [disabled]="trainingForm.invalid">Add your workout</button>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Time of workout</mat-label>
+        <input matInput type="text" mask="00:00" placeholder="hh:mm"  formControlName="trainingTime">
+      </mat-form-field>
+
+      <button class="buttonCreate" color="primary" type="submit">
+        Add Your Workout
+      </button>
     </form>
   </mat-card>
-  
+</div>

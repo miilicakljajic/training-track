@@ -1,27 +1,32 @@
 <mat-card class="login-card">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email" type="email" />
-        <mat-error *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].value">
-          Invalid email address
-        </mat-error>
-      </mat-form-field>
+  <mat-card-title>Welcome back!</mat-card-title>
   
-      <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
-        
-        <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
-          <mat-icon>{{ hidePassword ? 'visibility' : 'visibility_off' }}</mat-icon>
-        </button>
-        
-        <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].value">
-          Password must contains at least 8 characters
-        </mat-error>
-      </mat-form-field>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" />
+      <mat-error *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].value">
+        Invalid email address
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
+      
+      <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+        <mat-icon>{{ hidePassword ? 'visibility' : 'visibility_off' }}</mat-icon>
+      </button>
+      
+      <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].value">
+        Password must contain at least 8 characters
+      </mat-error>
+    </mat-form-field>
+
+    <button color="primary" type="submit" class="buttonLogin">Login</button>
+  </form>
   
-      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
-    </form>
-  </mat-card>
-  
+  <div class="registration-link">
+    <p>Don't have an account? <a href="register">Register here</a></p>
+  </div>
+</mat-card>

@@ -12,7 +12,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExerciseType, Training } from '../../models/training.model';
 import { TrainingService } from '../../services/training.service';
-import { Jwt } from '../../models/jwt.model';
+import { MatChipsModule } from '@angular/material/chips';
+import { NgxMaskDirective } from 'ngx-mask';
 
 @Component({
   selector: 'app-training-create',
@@ -28,6 +29,8 @@ import { Jwt } from '../../models/jwt.model';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatChipsModule,
+    NgxMaskDirective,
   ],
   templateUrl: './training-create.component.html',
   styleUrl: './training-create.component.css'
@@ -39,16 +42,24 @@ export class TrainingCreateComponent {
   .map(([key, value]) => key);
 
   training: Training = {
-    Id: 0,
-    Type: ExerciseType.CARDIO,
-    Duration: '',
-    BurnedCalories: 0,
-    Difficulty: 0,
-    Fatique: 0,
-    Note: '',
-    DateTime: new Date(),
-    UserId: 0
+    id: 0,
+    type: ExerciseType.CARDIO,
+    duration: '',
+    burnedCalories: 0,
+    difficulty: 0,
+    fatique: 0,
+    note: '',
+    dateTime: new Date(),
+    userId: 0
   }
+
+  selectedType: ExerciseType = ExerciseType.CARDIO;
+  selectedTypeString : string = "";
+  types: string[] = [
+    'Cardio', 'Strength workout', 'Flexibility'
+  ]
+  duration: string = "";
+  trainingTime: string = "";
 
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private trainingService: TrainingService) {
     this.trainingForm = this.formBuilder.group({
@@ -58,7 +69,8 @@ export class TrainingCreateComponent {
       difficulty: [1, Validators.required],
       fatique: [1, Validators.required],
       note: [''],
-      dateTime: [null, Validators.required]
+      dateTime: [null, Validators.required],
+      trainingTime: ['', Validators.required]
     })
   }
 
@@ -70,13 +82,34 @@ export class TrainingCreateComponent {
     return this.trainingForm.get('fatique') as FormControl;
   }
 
+  selectType(type: string) {
+    this.selectedTypeString = type;
+    if(type === "Cardio")
+      this.selectedType = ExerciseType.CARDIO;
+    if(type === "Strength workout")
+      this.selectedType = ExerciseType.STRENGTH_TRAINING;
+    if(type === "Flexibility")
+      this.selectedType = ExerciseType.FLEXIBILITY;
+  }
+
   onSubmit() {
+    let dur: string = this.trainingForm.value["duration"].toString();
+    let newStr = dur.slice(0, 2) + ':' + dur.slice(2, 4) + ":00";
     if(this.trainingForm.valid) {
-      this.training.Type = ExerciseType[this.trainingForm.value["exerciseType"] as keyof typeof ExerciseType];
-      this.training.Duration = this.trainingForm.value["duration"].toString();;
-      this.training.BurnedCalories = this.trainingForm.value["burnedCalories"];
-      this.training.Note = this.trainingForm.value["note"];
-      this.training.DateTime = this.trainingForm.value["dateTime"];
+      let selectedDate: Date = this.trainingForm.value["dateTime"];
+      let selectedTime: string = this.trainingForm.value["trainingTime"];
+
+      if (selectedDate && selectedTime) {
+        selectedTime = selectedTime.slice(0,2) + ":" + selectedTime.slice(2,4);
+        let [hours, minutes] = selectedTime.split(":").map(Number);
+        selectedDate.setHours(hours, minutes, 0); 
+      }
+
+      this.training.type = this.selectedType;
+      this.training.duration = newStr;
+      this.training.burnedCalories = this.trainingForm.value["burnedCalories"];
+      this.training.note = this.trainingForm.value["note"];
+      this.training.dateTime = selectedDate;
 
       this.trainingService.createTraining(this.training).subscribe({
         next: (result: Training) => {

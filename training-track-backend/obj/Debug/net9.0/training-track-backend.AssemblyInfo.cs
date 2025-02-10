@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("training-track-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf3f3245766fe276cf83793955cc7c8aa11022de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bac99b4eaa8008b229f6e96585817ddd1b994d7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("training-track-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("training-track-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

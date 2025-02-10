@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Login } from '../../models/login.model';
 import { Jwt } from '../../models/jwt.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   hidePassword = true;
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private authService: AuthService, private router: Router) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required]]
@@ -45,8 +46,8 @@ export class LoginComponent {
   onSubmit() {
     if(this.loginForm.valid) {
       let login: Login = {
-        Email: this.loginForm.value["email"],
-        Password: this.loginForm.value["password"]
+        email: this.loginForm.value["email"],
+        password: this.loginForm.value["password"]
       }
 
       this.authService.login(login).subscribe({
@@ -55,6 +56,7 @@ export class LoginComponent {
           this.snackBar.open('Successfully logged in', 'Close', {
             duration: 3000
           });
+          this.router.navigate(["home-page"]);
         },
 
         error: (error) => {

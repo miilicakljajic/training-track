@@ -1,54 +1,33 @@
-.page {
-    height: 100%;
-    width: 100%;
-    margin: 0 0 0 0;
-}
-
-:host {
+.mainContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin: 0 0 0 0;
-    background: linear-gradient(135deg, #ffffff, #bdc3c7);;
+    align-items: center;
+    min-height: 90vh;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    justify-content: center;
+    display: flex;
+    gap: 30px;
 }
   
 .card {
     width: 250px;
     height: 150px;
     display: flex;
-    align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.2rem;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 12px;
+    border-radius: 25px;
     font-weight: 500;
 }
-  
-.login {
-    background: linear-gradient(135deg, #65799b, #5e2563);
-}
-  
-.register {
-    background: linear-gradient(135deg, #355c7d, #6c5b7b);
-}
-  
+
 .add-workout {
     background: linear-gradient(135deg, #2a5298, #1e3c72);
 }
   
-.workout-tracking {
+.workout-statistics {
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
   

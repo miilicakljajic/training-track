@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Register } from '../../models/register.model';
 import { AuthService } from '../../services/auth.service';
 import { Jwt } from '../../models/jwt.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -32,11 +33,11 @@ export class RegisterComponent {
   hidePassword = true;
 
   register: Register = {
-    Email: "",
-    Password: "",
+    email: "",
+    password: "",
   }
 
-  constructor(private formBuilder: FormBuilder, private snackBar:  MatSnackBar, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private snackBar:  MatSnackBar, private authService: AuthService, private router: Router) {
     this.registerForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
@@ -53,7 +54,9 @@ export class RegisterComponent {
         next: (result: Jwt) => {
           this.snackBar.open('Successfully registered!', 'Close', {
             duration: 3000
-          })
+          });
+          localStorage.setItem("jwt", result.token);
+          this.router.navigate(["home-page"]);
         },
 
         error: (error) => {

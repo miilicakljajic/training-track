@@ -38,7 +38,9 @@ export class TrainingStatisticsComponent {
 
     this.trainingService.getTrainingsPerWeek(this.months.findIndex(m => m == month) + 1).subscribe({
       next: (result: Week[]) => {
-        this.weeks = result;
+
+        this.weeks = [...result];
+        console.log(this.weeks);
       },
 
       error: (error) => {

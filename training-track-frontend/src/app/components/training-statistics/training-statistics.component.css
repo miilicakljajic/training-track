@@ -1,3 +1,13 @@
+.mainContainer {
+    background-color: #eeeee4;
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    color: darkslategray;
+}
+
 .chip-container {
     display: flex;
     flex-wrap: wrap;
@@ -14,8 +24,8 @@
 }
 
 .month-chip.mat-chip-selected {
-    background-color: #3f51b5 !important;
-    border: 1px solid #3f51b5;
+    background-color: #1976d2 !important;
+  border-color: transparent;
 }
 
 ::ng-deep .month-chip.mat-chip-selected span {
@@ -33,7 +43,7 @@
 .week-card {
     width: 320px;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 25px;
     background-color: #f5f5f5;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

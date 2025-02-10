@@ -62,11 +62,9 @@ namespace training_track_backend.Services
                 if (currentWeekEnd > lastDayOfMonth)
                 {
                     currentWeekEnd = lastDayOfMonth;
-                    weeks.Add(new WeekDTO(i, currentWeekStart, currentWeekEnd, new List<TrainingDTO>()));
-                    break;
                 }
 
-                weeks.Add(new WeekDTO(i, currentWeekStart, currentWeekEnd, new List<TrainingDTO>()));
+                weeks.Add(new WeekDTO(i, currentWeekStart, currentWeekEnd, new List<TrainingDTO>(), 0, "00:00", 0, 0));
                 i++;
 
                 currentWeekStart = currentWeekEnd.AddDays(1);
@@ -82,13 +80,41 @@ namespace training_track_backend.Services
 
             foreach (WeekDTO w in weeks) 
             {
+                double difficulty = 0;
+                double fatique = 0;
+
                 foreach (TrainingDTO t in trainings)
                 {
-                    if (t.DateTime.Date >= w.startOfWeek.Date && t.DateTime.Date <= w.endOfWeek.Date)
+                    if (t.DateTime.Date >= w.StartOfWeek.Date && t.DateTime.Date <= w.EndOfWeek.Date)
                     {
-                        w.trainings.Add(t);
+                        int hourWeek = Convert.ToInt32(w.TotalDuration.Split(":")[0]);
+                        int minuteWeek = Convert.ToInt32(w.TotalDuration.Split(':')[1]);
+
+                        int hourTraining = Convert.ToInt32(t.Duration.Split(":")[0]);
+                        int minuteTraining = Convert.ToInt32(t.Duration.Split(':')[1]);
+
+                        hourWeek += hourTraining;
+                        minuteWeek += minuteTraining;
+
+                        if(minuteWeek >= 60)
+                        {
+                            minuteWeek -= 60;
+                            hourWeek += 1;
+                        }
+
+                        w.NumOfTrainings++;
+                        w.TotalDuration = Convert.ToString(hourWeek) + ":" + Convert.ToString(minuteWeek);
+                        difficulty += t.Difficulty;
+                        fatique += t.Fatique;
+
+                        w.Trainings.Add(t);
                     }
                 }
+                if(w.NumOfTrainings > 0)
+                {
+                    w.AverageDifficulty = difficulty / w.NumOfTrainings;
+                    w.AverageFatique = fatique / w.NumOfTrainings;
+                }   
             }
 
             return weeks;

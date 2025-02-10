@@ -4,5 +4,9 @@ export interface Week {
     weekNumber: number,
     startOfWeek: Date,
     endOfWeek: Date,
-    trainings: Training[]
+    trainings: Training[],
+    numOfTrainings: 0,
+    totalDuration: string,
+    averageDifficulty: number,
+    averageFatique: number
 }

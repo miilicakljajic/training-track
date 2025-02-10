@@ -4,6 +4,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from  '@angular/common/http';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }, provideAnimationsAsync()
+    }, provideAnimationsAsync(),
+    provideEnvironmentNgxMask()
     ]
 };
